@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Lab_03.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }body{
+             background-image: url("images/warehouse.gif");
+             background-repeat: no-repeat;
+             background-size: auto;
+             background-color: #a4dbd3;
+             font-family: 'Source Sans Pro', sans-serif;
+         }h2{
+              font-family: 'Source Sans Pro', sans-serif;
+          }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <table class="auto-style1">
+                    <tr>
+                        <td><h2>Welcome to Anthony&#39;s Warehouse</h2></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:HyperLink ID="homelink" runat="server" NavigateUrl="~/homepage.aspx">Home</asp:HyperLink>
+&nbsp; ||&nbsp;
+                            <asp:HyperLink ID="dblink" runat="server" NavigateUrl="~/datapage.aspx">Inventory</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               
+                     </asp:ContentPlaceHolder>
+
+                        </td>
+                    </tr>
+                </table>
+            
+        </div>
+    </form>
+</body>
+</html>
